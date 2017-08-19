@@ -1,0 +1,10 @@
+<p id="notice"><%= notice %></p>
+<b>Título: </b><%= @product.name%><br>
+<b>Quantidade: </b><%= @product.quantity%><br>
+<b>Preço de Custo: </b>R$ <%= @product.cost_price%><br>
+<b>Preço de venda: </b><%= @product.sell_price%><br>
+<b>Status da Venda: </b><%= @product.status%><br>
+<b><span style='color: red;' >Total da Venda: </span><b><%= @product.quantity * @product.sell_price%><br>
+<b><span style='color: blue;'> Lucro por peça:</span><b> <%= @product.sell_price - @product.cost_price%><br>
+<%= link_to 'Edit', edit_product_path(@product) %> |
+<%= link_to 'Back', products_path %>
